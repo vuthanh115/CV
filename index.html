@@ -1419,9 +1419,9 @@
       }
 
       /* ------------------------------------------------------------------------
-         COVER LETTER SECTION
+         EXECUTIVE SUMMARY SECTION (At bottom of CV)
          ------------------------------------------------------------------------ */
-      #cover-letter {
+      #executive-summary {
         break-before: page !important;
         page-break-before: always !important;
         break-inside: avoid !important;
@@ -1487,9 +1487,10 @@
       }
 
       /* ------------------------------------------------------------------------
-         AUTOMATION SECTION
+         AUTOMATION SECTIONS (Design Automation & BIM AI Automation)
          ------------------------------------------------------------------------ */
-      #automation {
+      #automation,
+      #bim-automation {
         break-before: page !important;
         page-break-before: always !important;
         break-inside: auto !important;
@@ -1748,6 +1749,108 @@
       color: var(--text-sub);
     }
 
+  
+    /* KAKA Structure Ribbon Banner Showcase */
+    .ribbon-showcase-box {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+      color: #f8fafc;
+      box-shadow: var(--shadow-md);
+    }
+
+    .ribbon-showcase-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 0.85rem;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 0.65rem;
+    }
+
+    .ribbon-showcase-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #38bdf8;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .ribbon-banner-img-wrap {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 6px;
+      padding: 0.65rem 1rem;
+      cursor: pointer;
+      overflow-x: auto;
+      text-align: center;
+      transition: border-color 0.2s;
+    }
+
+    .ribbon-banner-img-wrap:hover {
+      border-color: #38bdf8;
+    }
+
+    .ribbon-banner-img {
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+      vertical-align: middle;
+      border-radius: 4px;
+    }
+
+    .ribbon-modules-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.85rem;
+    }
+
+    .ribbon-pill {
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      padding: 0.25rem 0.55rem;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: #7dd3fc;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    @media print {
+      .ribbon-showcase-box {
+        background: #f8fafc !important;
+        border: 1px solid #cbd5e1 !important;
+        color: #0f172a !important;
+        padding: 0.65rem 0.85rem !important;
+        margin-bottom: 0.75rem !important;
+        box-shadow: none !important;
+      }
+      .ribbon-showcase-title {
+        color: #1e3a8a !important;
+        font-size: 0.88rem !important;
+      }
+      .ribbon-banner-img-wrap {
+        background: white !important;
+        border: 1px solid #cbd5e1 !important;
+        padding: 0.35rem !important;
+      }
+      .ribbon-pill {
+        background: #f1f5f9 !important;
+        border: 1px solid #cbd5e1 !important;
+        color: #334155 !important;
+        font-size: 0.64rem !important;
+        padding: 0.12rem 0.35rem !important;
+      }
+    }
+
   </style>
 </head>
 <body class="lang-bi">
@@ -1764,12 +1867,13 @@
     
     <ul class="nav-links">
       <li><a href="#about"><span class="lang-vi">Thông tin</span><span class="lang-en inline">About</span></a></li>
-      <li><a href="#bim-standards"><span class="lang-vi">Hệ thống BIM SOP</span><span class="lang-en inline">BIM Standards</span></a></li>
+      <li><a href="#bim-standards"><span class="lang-vi">Sổ tay BIM SOP</span><span class="lang-en inline">BIM SOP</span></a></li>
       <li><a href="#skills"><span class="lang-vi">Kỹ năng</span><span class="lang-en inline">Skills</span></a></li>
       <li><a href="#experience"><span class="lang-vi">Kinh nghiệm</span><span class="lang-en inline">Experience</span></a></li>
-      <li><a href="#automation"><span class="lang-vi">Tự động hóa BIM</span><span class="lang-en inline">Automation</span></a></li>
+      <li><a href="#automation"><span class="lang-vi">TĐH Thiết Kế</span><span class="lang-en inline">Design Auto</span></a></li>
+      <li><a href="#bim-automation"><span class="lang-vi">TĐH BIM &amp; AI</span><span class="lang-en inline">BIM &amp; AI</span></a></li>
       <li><a href="#projects"><span class="lang-vi">Dự án (17)</span><span class="lang-en inline">Projects (17)</span></a></li>
-      <li><a href="#cover-letter"><span class="lang-vi">Thư ngỏ</span><span class="lang-en inline">Letter</span></a></li>
+      <li><a href="#executive-summary"><span class="lang-vi">Tóm tắt &amp; Tầm nhìn</span><span class="lang-en inline">Summary</span></a></li>
     </ul>
 
     <div class="nav-controls">
@@ -1810,17 +1914,15 @@
       <div class="hero-details">
         <h1>VÕ PHI THANH</h1>
         <div class="hero-title">
-          <span class="lang-vi">Giám Đốc BIM / Trưởng Nhóm BIM &amp; Kỹ Thuật Tổng Thầu</span>
-          <span class="lang-en inline">BIM Director / Senior BIM &amp; Structural GC Technical Lead</span>
         </div>
 
         <!-- Summary -->
         <p class="hero-summary">
           <span class="lang-vi block">
-            Kỹ sư Xây dựng Dân dụng & Công nghiệp tốt nghiệp Đại học Bách Khoa TP.HCM (2006–2011) với hơn 14 năm kinh nghiệm thực chiến kết hợp giữa thiết kế kết cấu cấp cao, quản lý kỹ thuật tổng thầu và điều hành hệ thống BIM toàn diện. Định hướng quản trị BIM thực chiến từ Concept đến As-built (LOD 100–500): chủ động thực hiện Value Engineering (VE) & bóc tách khối lượng (QTO) hỗ trợ đấu thầu thắng dự án, kiểm soát chặt chẽ thầu phụ trong môi trường dữ liệu chung (CDE), và chuẩn hóa Shop Drawing gắn liền với biện pháp thi công (Constructability) giúp loại bỏ triệt để xung đột & rework tại hiện trường. Tiên phong phát triển công cụ tự động hóa chuyên sâu bằng C# và Python, biến BIM thành vũ khí chiến lược kiểm soát rủi ro kỹ thuật và tối ưu hóa lợi nhuận cho doanh nghiệp.
+            Kỹ sư Xây dựng Dân dụng & Công nghiệp tốt nghiệp Đại học Bách Khoa TP.HCM (2006–2011) với hơn 15 năm kinh nghiệm thực chiến kết hợp giữa thiết kế kết cấu cấp cao, quản lý kỹ thuật tổng thầu và điều hành hệ thống BIM toàn diện. Định hướng quản trị BIM thực chiến từ Concept đến As-built (LOD 100–500): chủ động thực hiện Value Engineering (VE) & bóc tách khối lượng (QTO) hỗ trợ đấu thầu thắng dự án, kiểm soát chặt chẽ thầu phụ trong môi trường dữ liệu chung (CDE), và chuẩn hóa Shop Drawing gắn liền với biện pháp thi công (Constructability) giúp loại bỏ triệt để xung đột & rework tại hiện trường. Tiên phong phát triển công cụ tự động hóa chuyên sâu bằng C# và Python, biến BIM thành vũ khí chiến lược kiểm soát rủi ro kỹ thuật và tối ưu hóa lợi nhuận cho doanh nghiệp.
           </span>
           <span class="lang-en block">
-            Civil & Industrial Structures Engineer graduated from Ho Chi Minh City University of Technology (Bach Khoa University, 2006–2011) with over 14 years of hands-on experience bridging senior structural engineering, general contractor technical management, and enterprise BIM leadership. Driving a pragmatic, site-tested BIM philosophy across the entire lifecycle from Concept to As-built (LOD 100–500): spearheading structural Value Engineering (VE) & rapid QTO to win competitive bids, rigorously managing sub-contractors within Common Data Environments (CDE), and optimizing constructability-driven Shop Drawings to eliminate on-site clashes and rework. Pioneer in developing proprietary automation tools with C# and Python, transforming BIM into a strategic engine to mitigate technical risks and maximize corporate profitability.
+            Civil & Industrial Structures Engineer graduated from Ho Chi Minh City University of Technology (Bach Khoa University, 2006–2011) with over 15 years of hands-on experience bridging senior structural engineering, general contractor technical management, and enterprise BIM leadership. Driving a pragmatic, site-tested BIM philosophy across the entire lifecycle from Concept to As-built (LOD 100–500): spearheading structural Value Engineering (VE) & rapid QTO to win competitive bids, rigorously managing sub-contractors within Common Data Environments (CDE), and optimizing constructability-driven Shop Drawings to eliminate on-site clashes and rework. Pioneer in developing proprietary automation tools with C# and Python, transforming BIM into a strategic engine to mitigate technical risks and maximize corporate profitability.
           </span>
         </p>
         
@@ -1852,13 +1954,6 @@
             <span>
               <strong><span class="lang-vi">Ngày sinh:</span><span class="lang-en inline">Date of Birth:</span></strong> 
               15/05/1988
-            </span>
-          </div>
-          <div class="meta-item">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0"/></svg>
-            <span>
-              <strong><span class="lang-vi">CCCD:</span><span class="lang-en inline">ID No:</span></strong> 
-              046088000136
             </span>
           </div>
           <div class="meta-item">
@@ -1940,9 +2035,7 @@
           </ul>
           <div class="bim-sop-footer">
             <span class="bim-metric-chip">8 Phases • CDE</span>
-            <a href="file:///c:/Users/thanhvp/Downloads/BIM/index.html" target="_blank" class="bim-sop-link" title="Xem Cổng Thông Tin Vòng Đời BIM">
-              <span class="lang-vi">Mở Portal</span><span class="lang-en inline">Open Portal</span> &rarr;
-            </a>
+            <span class="bim-sop-link"><span class="lang-vi">Chuẩn ISO 19650</span><span class="lang-en inline">ISO 19650 Standard</span></span>
           </div>
         </div>
 
@@ -1955,7 +2048,7 @@
           </h3>
           <ul class="bim-sop-points">
             <li>
-              <span class="lang-vi"><strong>ATool Join Priority:</strong> Quy tắc phân cấp ưu tiên giao cắt cấu kiện (Sàn &gt; Móng &gt; Cột &gt; Dầm &gt; Vách &gt; Cầu thang) triệt tiêu trùng khối lượng.</span>
+              <span class="lang-vi"><strong>KAKA Join Priority:</strong> Quy tắc phân cấp ưu tiên giao cắt cấu kiện (Sàn &gt; Móng &gt; Cột &gt; Dầm &gt; Vách &gt; Cầu thang) triệt tiêu trùng khối lượng.</span>
               <span class="lang-en block">Geometry precedence hierarchy ensuring watertight volumetric calculations without double counting.</span>
             </li>
             <li>
@@ -1963,15 +2056,13 @@
               <span class="lang-en block">Standardized 7-step automated concrete &amp; formwork BOQ extraction workflow.</span>
             </li>
             <li>
-              <span class="lang-vi">Tích hợp bộ công cụ BimSpeed &amp; ATool: Chuẩn hóa 14 cấu kiện chịu lực chính và 7 mẫu Revit Schedules xuất xưởng.</span>
-              <span class="lang-en block">BimSpeed &amp; ATool integration covering 14 structural elements and 7 production schedules.</span>
+              <span class="lang-vi">Tích hợp bộ công cụ KAKA Structure: Chuẩn hóa 14 cấu kiện chịu lực chính và 7 mẫu Revit Schedules xuất xưởng.</span>
+              <span class="lang-en block">KAKA Structure integration covering 14 structural elements and 7 production schedules.</span>
             </li>
           </ul>
           <div class="bim-sop-footer">
             <span class="bim-metric-chip">14 Elements • 7 BOQ</span>
-            <a href="file:///c:/Users/thanhvp/Downloads/BIM/BSV_BimKetCauVer2.html" target="_blank" class="bim-sop-link" title="Xem Sổ Tay BIM Kết Cấu">
-              <span class="lang-vi">Mở Sổ Tay</span><span class="lang-en inline">Open Manual</span> &rarr;
-            </a>
+            <span class="bim-sop-link"><span class="lang-vi">Sổ Tay Kết Cấu Ver 2</span><span class="lang-en inline">Structural SOP Ver 2</span></span>
           </div>
         </div>
 
@@ -1998,9 +2089,7 @@
           </ul>
           <div class="bim-sop-footer">
             <span class="bim-metric-chip">9 Wall Types • 31 Schedules</span>
-            <a href="file:///c:/Users/thanhvp/Downloads/BIM/BSV_BimKienTruc.html" target="_blank" class="bim-sop-link" title="Xem Sổ Tay BIM Kiến Trúc">
-              <span class="lang-vi">Mở Sổ Tay</span><span class="lang-en inline">Open Manual</span> &rarr;
-            </a>
+            <span class="bim-sop-link"><span class="lang-vi">Sổ Tay Kiến Trúc HTKC</span><span class="lang-en inline">Architectural SOP</span></span>
           </div>
         </div>
 
@@ -2027,9 +2116,7 @@
           </ul>
           <div class="bim-sop-footer">
             <span class="bim-metric-chip">LOD 400 • 35 BBS</span>
-            <a href="file:///c:/Users/thanhvp/Downloads/BIM/BSV_ShopDrawingRebar.html" target="_blank" class="bim-sop-link" title="Xem Sổ Tay Shop Cốt Thép">
-              <span class="lang-vi">Mở Sổ Tay</span><span class="lang-en inline">Open Manual</span> &rarr;
-            </a>
+            <span class="bim-sop-link"><span class="lang-vi">Sổ Tay Shop Cốt Thép</span><span class="lang-en inline">Rebar Shop Guide</span></span>
           </div>
         </div>
       </div>
@@ -2070,16 +2157,16 @@
               </div>
               <ul class="timeline-duties">
                 <li>
-                  <span class="lang-vi block"><strong>Thiết lập Hệ Thống Chuẩn Hóa BIM Doanh Nghiệp (ISO 19650 &amp; EIR/BEP/CDE):</strong> Trực tiếp soạn thảo và ban hành toàn bộ bộ quy chuẩn sổ tay BIM đa bộ môn: Sổ tay Kết cấu (BSV_BimKetCauVer2), Sổ tay Kiến trúc (BSV_BimKienTruc), và Quy trình Shop Drawing Cốt thép (BSV_ShopDrawingRebar) ứng dụng đồng bộ trên nền tảng Autodesk Revit, BimSpeed và ATool.</span>
-                  <span class="lang-en block"><strong>Enterprise BIM Standardization Leadership (ISO 19650 &amp; EIR/BEP/CDE):</strong> Authored and deployed the company-wide BIM SOP manual system: Structural BIM Handbook, Architectural BIM Handbook, and Rebar Shop Drawing Guide, standardized across Autodesk Revit, BimSpeed, and ATool environments.</span>
+                  <span class="lang-vi block"><strong>Thiết lập Hệ Thống Chuẩn Hóa BIM Doanh Nghiệp (ISO 19650 &amp; EIR/BEP/CDE):</strong> Trực tiếp soạn thảo và ban hành toàn bộ bộ quy chuẩn sổ tay BIM đa bộ môn: Sổ tay Kết cấu (BSV_BimKetCauVer2), Sổ tay Kiến trúc (BSV_BimKienTruc), và Quy trình Shop Drawing Cốt thép (BSV_ShopDrawingRebar) ứng dụng đồng bộ trên nền tảng Autodesk Revit và KAKA Structure.</span>
+                  <span class="lang-en block"><strong>Enterprise BIM Standardization Leadership (ISO 19650 &amp; EIR/BEP/CDE):</strong> Authored and deployed the company-wide BIM SOP manual system: Structural BIM Handbook, Architectural BIM Handbook, and Rebar Shop Drawing Guide, standardized across Autodesk Revit and KAKA Structure environments.</span>
                 </li>
                 <li>
-                  <span class="lang-vi block"><strong>Quản lý Kỹ thuật Tổng thầu &amp; Điều phối Dự án Siêu Quy Mô:</strong> Trực tiếp điều hành công tác thiết kế kết cấu, quản lý chất lượng bản vẽ thi công (Shop Drawing QA/QC) và điều phối nhà thầu phụ tại các đại dự án: Siêu nhà máy MEGA Textile (67.5 ha), BW Bàu Bàng (23 ha), APF Đồng Nai (11.3 ha). Đồng bộ dữ liệu OpenBIM Tekla Structures &amp; Revit qua bộ thông số chuẩn hóa 85 Shared Parameters (MEGA-BP3).</span>
-                  <span class="lang-en block"><strong>GC Technical Management &amp; Mega Project Coordination:</strong> Spearheaded structural design execution, Shop Drawing QA/QC, and sub-contractor coordination for mega projects: MEGA Textile (67.5 ha), BW Bau Bang (23 ha), and APF Dong Nai (11.3 ha). Pioneered OpenBIM interoperability between Tekla Structures and Revit via 85 standardized Shared Parameters (MEGA-BP3).</span>
+                  <span class="lang-vi block"><strong>Quản lý Kỹ thuật Tổng thầu &amp; Điều phối Dự án Siêu Quy Mô:</strong> Trực tiếp điều hành công tác thiết kế kết cấu, quản lý chất lượng bản vẽ thi công (Shop Drawing QA/QC) và điều phối nhà thầu phụ tại các đại dự án: Siêu nhà máy MEGA Textile (67.5 ha), BW Bàu Bàng (23 ha), APF Đồng Nai (11.3 ha). Phối hợp đồng bộ dữ liệu mô hình kết cấu thép và bê tông giữa Tekla Structures, Revit và Navisworks.</span>
+                  <span class="lang-en block"><strong>GC Technical Management &amp; Mega Project Coordination:</strong> Spearheaded structural design execution, Shop Drawing QA/QC, and sub-contractor coordination for mega projects: MEGA Textile (67.5 ha), BW Bau Bang (23 ha), and APF Dong Nai (11.3 ha). Coordinated synchronized structural steel and reinforced concrete models across Tekla Structures, Revit, and Navisworks.</span>
                 </li>
                 <li>
-                  <span class="lang-vi block"><strong>Tự động hóa Bóc tách Khối lượng (5D QTO) &amp; Quản trị Rủi ro Xung đột:</strong> Xây dựng quy trình tự động phân cấp ưu tiên giao cắt cấu kiện (ATool Join Priority: Sàn &gt; Móng &gt; Cột &gt; Dầm &gt; Vách &gt; Cầu thang), chuẩn hóa 7 bước bóc tách BOQ bê tông - ván khuôn, và quản lý 31+ bảng thống kê kiến trúc chuẩn xác 100%, triệt tiêu hoàn toàn rủi ro trùng lặp khối lượng.</span>
-                  <span class="lang-en block"><strong>Automated 5D QTO &amp; Constructability Risk Elimination:</strong> Formulated systematic solid join geometry rules (ATool Join Priority: Slab &gt; Foundation &gt; Column &gt; Beam &gt; Wall &gt; Stair), 7-step automated concrete &amp; formwork BOQ workflow, and governed 31+ architectural schedules to eliminate duplication errors.</span>
+                  <span class="lang-vi block"><strong>Tự động hóa Bóc tách Khối lượng (5D QTO) &amp; Trích xuất Cơ sở Dữ liệu SQL:</strong> Xây dựng quy trình tự động phân cấp ưu tiên giao cắt cấu kiện (KAKA Join Priority: Sàn &gt; Móng &gt; Cột &gt; Dầm &gt; Vách &gt; Cầu thang), chuẩn hóa 7 bước bóc tách BOQ bê tông - ván khuôn; lập trình trích xuất trực tiếp khối lượng mô hình sang cơ sở dữ liệu quan hệ <strong>SQLite (.db) &amp; Script SQL (.sql)</strong> theo chuẩn mã đề mục Mindmap (Rebar, Móng, Cột, Dầm...) phục vụ kiểm toán chi phí và đấu thầu tự động.</span>
+                  <span class="lang-en block"><strong>Automated 5D QTO &amp; BIM-to-SQL Relational Data Pipeline:</strong> Formulated systematic solid join geometry rules (KAKA Join Priority: Slab &gt; Foundation &gt; Column &gt; Beam &gt; Wall &gt; Stair), 7-step automated BOQ workflows; programmed direct extraction from Revit models to <strong>SQLite (.db) &amp; SQL batch scripts (.sql)</strong> structured by Mindmap codes (Rebar, Footings, Columns, Beams...) for automated bidding and real-time cost auditing.</span>
                 </li>
                 <li>
                   <span class="lang-vi block"><strong>Chuẩn hóa Shop Drawing Cốt thép LOD 400:</strong> Thiết lập quy ước phân vùng cấu kiện (Partitioning), công nghệ 2D Bending Detail, gắn thẻ rải thép Multi-Rebar Annotation (MRA) và tiêu chuẩn vị trí cắt nối thép chịu lực dầm/sàn (L/4 &amp; L/6), tối ưu hóa tỷ lệ hao hụt thép thi công thực tế tại công trường.</span>
@@ -2152,158 +2239,6 @@
           </div>
         </section>
 
-        <!-- Cover Letter -->
-        <section class="section-card" id="cover-letter">
-          <div class="section-header">
-            <h2 class="section-title">
-              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              <span class="lang-vi">Thư Ngỏ</span>
-              <span class="lang-en inline">Cover Letter</span>
-            </h2>
-            <span style="font-size: 0.8125rem; color: var(--text-sub); font-weight: 600;">VICTORYCONS — Giám Đốc BIM / BIM Director</span>
-          </div>
-
-          <div class="letter-box">
-            <p>
-              <strong>
-                <span class="lang-vi">Kính gửi: Ban Lãnh Đạo Công ty Cổ phần VICTORYCONS,</span>
-                <span class="lang-en inline">To: The Board of Directors & Leadership Team of VICTORYCONS,</span>
-              </strong>
-            </p>
-            <p>
-              <span class="lang-vi block">
-                Định hướng BIM của tôi xuất phát từ tư duy của một người làm thiết kế, quản lý kỹ thuật và quản trị chi phí. Việc hiểu rõ bản chất từ khâu tính toán đến khi hiện thực hóa trên công trường giúp tôi xây dựng một hệ thống BIM mang lại giá trị thực tế nhất cho công ty. Cụ thể ở các khía cạnh cốt lõi sau:
-              </span>
-              <span class="lang-en block">
-                My BIM orientation stems from the mindset of a structural designer, technical manager, and cost controller. Deeply understanding the engineering essence from initial calculation models to site execution allows me to build a practical, high-value BIM ecosystem for the enterprise. Specifically across these core pillars:
-              </span>
-            </p>
-
-            <div class="letter-pillar">
-              <div class="pillar-title">
-                <span class="lang-vi">1. Quản lý toàn diện vòng đời thiết kế dự án (Từ Concept đến Hoàn công):</span>
-                <span class="lang-en block">1. Full Design Lifecycle Management (From Concept to As-built):</span>
-              </div>
-              <p>
-                <span class="lang-vi block">
-                  Tôi có kinh nghiệm kiểm soát thiết kế xuyên suốt vòng đời dự án. Từ giai đoạn ý tưởng (Concept) để định hình giải pháp kết cấu, phát triển hồ sơ thiết kế kỹ thuật, đến việc xuất bản vẽ thi công (Shop drawing) và cuối cùng là mô hình hoàn công (As-built model). Việc áp dụng BIM vào quá trình này giúp tôi quản lý sự phát triển của thông tin (theo các mức độ LOD) một cách chặt chẽ, đảm bảo mô hình hoàn công cuối cùng phản ánh độ chính xác tuyệt đối của công trình thực tế, đáp ứng các tiêu chuẩn khắt khe nhất của Chủ đầu tư.
-                </span>
-                <span class="lang-en block">
-                  I possess end-to-end design control experience across the entire project lifecycle. From the Concept phase shaping structural schemes and developing technical design dossiers, to generating detailed Shop Drawings and final As-built models. Integrating BIM into this workflow enables rigorous management of information progression (LOD milestones), ensuring the final As-built model mirrors real site conditions with absolute precision and meets the most stringent Client standards.
-                </span>
-              </p>
-            </div>
-
-            <div class="letter-pillar">
-              <div class="pillar-title">
-                <span class="lang-vi">2. Tối ưu hóa Giá trị (Value Engineering - VE) và hỗ trợ đấu thầu:</span>
-                <span class="lang-en block">2. Value Engineering (VE) & Bidding Support:</span>
-              </div>
-              <p>
-                <span class="lang-vi block">
-                  Trong môi trường cạnh tranh khốc liệt, trúng thầu đòi hỏi năng lực tối ưu chi phí cực tốt. Tôi đã trực tiếp hỗ trợ Phòng Đấu thầu thực hiện công tác Value Engineering (VE) phần kết cấu. Bằng việc kết hợp các phần mềm tính toán (ETABS, SAP2000) và mô hình hóa (Revit), tôi có thể phản biện thiết kế gốc, đề xuất các phương án kết cấu thay thế an toàn nhưng tiết kiệm vật liệu hơn, đồng thời xuất khối lượng (QTO) nhanh chóng và chính xác để phục vụ chào giá cạnh tranh.
-                </span>
-                <span class="lang-en block">
-                  In an intensely competitive market, winning bids requires superior cost-optimization capability. I have directly supported the Bidding Department in executing structural Value Engineering (VE). By combining structural analysis software (ETABS, SAP2000) with 3D BIM modeling (Revit), I counter-analyze original tender designs, propose safer yet leaner material-saving alternatives, and extract rapid, exact Quantities Take-Off (QTO) to deliver highly competitive bidding pricing.
-                </span>
-              </p>
-            </div>
-
-            <div class="letter-pillar">
-              <div class="pillar-title">
-                <span class="lang-vi">3. Kiểm soát thầu phụ và đánh giá phương án VE:</span>
-                <span class="lang-en block">3. Sub-contractor Control & VE Proposal Evaluation:</span>
-              </div>
-              <p>
-                <span class="lang-vi block">
-                  Không chỉ chủ động làm VE, tôi còn chịu trách nhiệm kiểm soát chặt chẽ các đề xuất VE từ phía nhà thầu phụ (ví dụ như thay đổi biện pháp cọc, kết cấu thép, hay cấu kiện đúc sẵn). Bất kỳ sự thay đổi nào cũng được tôi đưa vào mô hình tổng hợp để kiểm tra chéo (cross-check). Nhờ môi trường dữ liệu chung và mô hình 3D, tôi đánh giá được ngay phương án VE đó có gây xung đột (clash) với hệ thống Cơ điện (MEP) hay Kiến trúc hay không, đảm bảo lợi ích kinh tế không đi kèm với rủi ro thi công.
-                </span>
-                <span class="lang-en block">
-                  Beyond driving proactive VE, I strictly review and control VE proposals submitted by sub-contractors (e.g., changes in piling methods, structural steel, or precast elements). Every modification is integrated into the federated model for cross-checking. Leveraging the Common Data Environment (CDE) and 3D coordination, I immediately assess whether a proposed VE creates clashes with MEP or Architectural elements, guaranteeing financial savings without introducing site execution risks.
-                </span>
-              </p>
-            </div>
-
-            <div class="letter-pillar">
-              <div class="pillar-title">
-                <span class="lang-vi">4. Quản lý thiết kế và tối ưu Shop Drawing thực tế (Constructability):</span>
-                <span class="lang-en block">4. Design Management & Shop Drawing Optimization (Constructability):</span>
-              </div>
-              <p>
-                <span class="lang-vi block">
-                  Lấy ví dụ tiêu biểu tại dự án MEGA Textile – một dự án công nghiệp quy mô với các cấu kiện phức tạp. Tôi trực tiếp kiểm soát, phê duyệt hệ thống shop drawing và điều phối các đệ trình của nhà thầu. Thay vì chỉ duyệt bản vẽ 2D, tôi áp dụng tư duy BIM để kiểm tra các nút giao cắt, biện pháp cẩu lắp cấu kiện đúc sẵn (precast) và sự đồng bộ giữa kết cấu bê tông – thép. Điều này giúp phát hiện trước rủi ro, giảm thiểu tối đa việc phải đập phá hay sửa chữa (rework) ngoài công trường.
-                </span>
-                <span class="lang-en block">
-                  A prime example is the MEGA Textile project—a large-scale industrial facility with intricate structural components. I directly supervised and approved the shop drawing submittals and coordinated contractor packages. Instead of traditional 2D review, I applied BIM-driven constructability reviews to inspect connection nodes, precast element lifting/installation methods, and synchronization between reinforced concrete and structural steel. This proactively mitigated site conflicts, virtually eliminating costly on-site demolition and rework.
-                </span>
-              </p>
-            </div>
-
-            <div class="letter-pillar">
-              <div class="pillar-title">
-                <span class="lang-vi">5. Khép kín vòng đời dự án bằng Tự động hóa (Automation):</span>
-                <span class="lang-en block">5. Closing the Project Lifecycle with Automation:</span>
-              </div>
-              <p>
-                <span class="lang-vi block">
-                  Và để toàn bộ các quy trình trên – từ đấu thầu, kiểm tra VE, đến xuất bản vẽ – diễn ra nhanh và chính xác nhất, tôi không quản lý thủ công. Tôi trực tiếp phát triển các công cụ (add-ins) bằng C# và Python để tự động hóa việc tính toán nội lực, dựng hình và xử lý dữ liệu.
-                </span>
-                <span class="lang-en block">
-                  To ensure all preceding workflows—from bidding and VE scrutiny to final drawing generation—operate at peak speed and accuracy, I eliminate manual bottlenecks. I personally develop custom automation tools and add-ins in C# and Python to automate internal force calculation extractions, 3D modeling, and data management.
-                </span>
-              </p>
-            </div>
-
-            <div class="letter-conclusion">
-              <p style="margin: 0; line-height: 1.8;">
-                <span class="lang-vi block">
-                  <strong>Tóm lại:</strong> Trải nghiệm tại Bông Sen Vàng đã rèn luyện cho tôi lăng kính của một nhà quản lý dự án thực thụ. Tôi ứng tuyển vị trí <strong>Giám đốc BIM tại VICTORYCONS</strong> để mang đến một hệ thống quản lý bằng dữ liệu – nơi BIM kết hợp với Tự động hóa không chỉ là công cụ vẽ, mà là vũ khí chiến lược để phòng thầu thắng dự án, phòng kỹ thuật kiểm soát rủi ro, và công trường tối ưu hóa lợi nhuận.
-                </span>
-                <span class="lang-en block">
-                  <strong>In Summary:</strong> My experience at Bong Sen Vang has forged the mindset and vision of a true project director. I am applying for the <strong>BIM Director position at VICTORYCONS</strong> to deliver a data-driven management ecosystem—where BIM combined with Automation transcends drafting tools to become a strategic asset: empowering the Bidding team to win tenders, the Technical division to eliminate risks, and the Construction site to maximize profitability.
-                </span>
-              </p>
-            </div>
-
-            <p style="text-align: right; margin-top: 1.5rem; font-weight: 700; color: var(--primary-light);">
-              <span class="lang-vi">Trân trọng,</span>
-              <span class="lang-en inline">Sincerely,</span><br>
-              <span style="font-size: 1.15rem; color: var(--primary-dark);">Võ Phi Thanh</span>
-            </p>
-          </div>
-
-          <div class="highlight-stat-grid">
-            <div class="stat-pill">
-              <div class="stat-number" style="font-size: 1.15rem;">Concept → As-built</div>
-              <div class="stat-desc">
-                <span class="lang-vi">Vòng đời BIM & Quản lý LOD</span>
-                <span class="lang-en block">Full Lifecycle BIM & LOD Control</span>
-              </div>
-            </div>
-            <div class="stat-pill">
-              <div class="stat-number">VE & QTO</div>
-              <div class="stat-desc">
-                <span class="lang-vi">Tối ưu chi phí & Hỗ trợ đấu thầu</span>
-                <span class="lang-en block">Cost Optimization & Bidding Win</span>
-              </div>
-            </div>
-            <div class="stat-pill">
-              <div class="stat-number">Zero Rework</div>
-              <div class="stat-desc">
-                <span class="lang-vi">Kiểm soát xung đột & Hiện trường</span>
-                <span class="lang-en block">Clash-Free & Constructability</span>
-              </div>
-            </div>
-            <div class="stat-pill">
-              <div class="stat-number">C# & Python</div>
-              <div class="stat-desc">
-                <span class="lang-vi">Tự động hóa & Khép kín quy trình</span>
-                <span class="lang-en block">Custom Automation & Add-ins</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
       </div>
 
       <!-- Right Column: Skills, Education, Degree -->
@@ -2334,8 +2269,7 @@
               <span class="skill-tag featured">5D QTO / Automated BOQ</span>
               <span class="skill-tag">LOD 400 Rebar Shop Drawing</span>
               <span class="skill-tag">OpenBIM IFC / Shared Parameters</span>
-              <span class="skill-tag">BimSpeed Ecosystem</span>
-              <span class="skill-tag">ATool Suite</span>
+              <span class="skill-tag">KAKA Structure Ecosystem</span>
               <span class="skill-tag">Navisworks Manage (Clash Detective)</span>
             </div>
           </div>
@@ -2352,10 +2286,12 @@
               <span class="skill-tag featured">Revit API</span>
               <span class="skill-tag featured">Dynamo Visual Scripting</span>
               <span class="skill-tag featured">C# (.NET / WPF)</span>
+              <span class="skill-tag featured">Revit API Add-in Engine</span>
+              <span class="skill-tag featured">AI-Assisted BIM Automation</span>
               <span class="skill-tag">Python Scripting</span>
               <span class="skill-tag">Tekla Structures</span>
               <span class="skill-tag">OpenBIM (IFC2x3 / IFC4)</span>
-              <span class="skill-tag">SQL Database</span>
+              <span class="skill-tag featured">SQL / SQLite Database (BoQ Data Pipeline)</span>
               <span class="skill-tag">AutoCAD</span>
             </div>
           </div>
@@ -2449,18 +2385,18 @@
       <div class="section-header">
         <h2 class="section-title">
           <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-          <span class="lang-vi">Quy Trình & Thuật Toán Tự Động Hóa (Dynamo / C# / ETABS to Revit)</span>
-          <span class="lang-en inline">Automation Workflows & Algorithms (Dynamo / C# / ETABS to Revit)</span>
+          <span class="lang-vi">Quy Trình &amp; Thuật Toán Tự Động Hóa Thiết Kế Kết Cấu (Dynamo / ETABS to Revit)</span>
+          <span class="lang-en inline">Structural Design Automation Workflows &amp; Algorithms (Dynamo / ETABS to Revit)</span>
         </h2>
         <span style="font-size: 0.8125rem; color: var(--text-sub); font-weight: 600;">Automation Architecture</span>
       </div>
       
       <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
         <span class="lang-vi block">
-          Hệ thống script Dynamo và thuật toán lập trình C# do kỹ sư Võ Phi Thanh trực tiếp nghiên cứu và ứng dụng: tự động đồng bộ kết quả nội lực từ ETABS, tính toán khả năng chịu lực, tự động gán tham số Family Revit, xuất bảng thống kê khối lượng (Schedules) và sinh bản vẽ chi tiết cấu kiện (Beam, Column, Wall Details):
+          Hệ thống script Dynamo và thuật toán lập trình nghiên cứu và ứng dụng trong thiết kế kết cấu: tự động đồng bộ kết quả nội lực từ ETABS, tính toán khả năng chịu lực, tự động gán tham số Family Revit, xuất bảng thống kê khối lượng (Schedules) và sinh bản vẽ chi tiết cấu kiện (Beam, Column, Wall Details):
         </span>
         <span class="lang-en block">
-          Custom Dynamo visual scripts and C# algorithms developed by engineer Vo Phi Thanh: automatically transferring internal forces from ETABS, assessing cross-section structural load-bearing capacity, updating Revit family parameters, generating schedules, and generating structural reinforcement shop drawings:
+          Dynamo visual scripts and algorithmic workflows applied in structural design: automatically transferring internal forces from ETABS, assessing cross-section structural load-bearing capacity, updating Revit family parameters, generating schedules, and generating structural reinforcement drawings:
         </span>
       </p>
 
@@ -2567,37 +2503,171 @@
           </div>
         </div>
 
-        <!-- Tech 7: OpenBIM Tekla to Revit -->
+
+      </div>
+    </section>
+
+    <!-- DEDICATED SECTION: BIM AUTOMATION VIA C# & AI EXECUTION -->
+        <!-- DEDICATED SECTION: BIM AUTOMATION VIA C# & AI EXECUTION (KAKA STRUCTURE ADD-IN) -->
+    <section class="section-card automation-section" id="bim-automation">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+          <span class="lang-vi">Hệ Sinh Thái Tự Động Hóa BIM, C# .NET API &amp; AI Thực Thi (KAKA Structure Suite)</span>
+          <span class="lang-en inline">Enterprise BIM Automation, C# .NET API &amp; AI Execution (KAKA Structure Suite)</span>
+        </h2>
+        <span style="font-size: 0.8125rem; color: var(--text-sub); font-weight: 600;">C# Revit API • AI Copilot (Port 8080) • Revit MCP Server • SQLite BoQ</span>
+      </div>
+
+      <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.25rem;">
+        <span class="lang-vi block">
+          Hệ sinh thái Add-in <strong>KAKA Structure</strong> thiết kế kiến trúc và lập trình bằng <strong>C# (.NET / Revit API)</strong> kết hợp <strong>Giao thức AI Ngữ Cảnh (Revit MCP Server &amp; AI Copilot Prompt Bar)</strong>. Bộ công cụ tích hợp toàn diện từ tự động mô hình hóa thép LOD 400 (Cột, Dầm, Vách, Sàn, Móng, Cầu thang), xuất biểu BoQ sang cơ sở dữ liệu SQL, đến cầu nối AI điều khiển mô hình theo thời gian thực:
+        </span>
+        <span class="lang-en block">
+          Enterprise Add-in suite <strong>KAKA Structure</strong> architected and authored in <strong>C# (.NET / Revit API)</strong> integrated with <strong>Model Context Protocol AI Bridge (Revit MCP Server &amp; AI Copilot Prompt Bar)</strong>. Features end-to-end LOD 400 rebar generation (Column, Beam, Wall, Slab, Foundation, Stair), automated SQL BoQ database extraction, and real-time bidirectional AI agent model control:
+        </span>
+      </p>
+
+      <!-- Ribbon Toolbar Showcase Banner -->
+      <div class="ribbon-showcase-box">
+        <div class="ribbon-showcase-header">
+          <div class="ribbon-showcase-title">
+            <span>⚡ Giao Diện Thanh Điều Khiển KAKA Structure Trên Autodesk Revit</span>
+            <span style="font-size: 0.75rem; background: rgba(56, 189, 248, 0.2); color: #38bdf8; padding: 0.15rem 0.5rem; border-radius: 9999px;">Revit 2024–2026 Compatible</span>
+          </div>
+          <span style="font-size: 0.78rem; color: #94a3b8; font-family: var(--font-mono);">Architecture: KAKA Structure C# .NET Suite</span>
+        </div>
+
+        <div class="ribbon-banner-img-wrap" onclick="openLightbox('assets/images/kaka_structure_ribbon.png', 'Thanh công cụ KAKA Structure trên Autodesk Revit: Đầy đủ module Column, Beam, Wall, Slab, Foundation, Stair, SQL BoQ, MCP Server và AI Copilot')">
+          <img src="assets/images/kaka_structure_ribbon.png" alt="KAKA Structure Ribbon Toolbar" class="ribbon-banner-img">
+        </div>
+
+        <div class="ribbon-modules-pills">
+          <span class="ribbon-pill">🏛️ Column Rebar v2.0 &amp; Auto Drawing</span>
+          <span class="ribbon-pill">📏 Beam Rebar, Section &amp; Drawing</span>
+          <span class="ribbon-pill">🧱 Shear Wall Rebar</span>
+          <span class="ribbon-pill">🔲 Slab Rebar (Top &amp; Bottom)</span>
+          <span class="ribbon-pill">📐 Foundation &amp; Strip Footing</span>
+          <span class="ribbon-pill">🪜 Stair Rebar Detail</span>
+          <span class="ribbon-pill">🗄️ Export BoQ to SQL / SQLite</span>
+          <span class="ribbon-pill">🌐 Revit MCP Server (localhost:8080)</span>
+          <span class="ribbon-pill">🤖 AI Copilot (Prompt Box &amp; Chat)</span>
+        </div>
+      </div>
+
+      <div class="tech-grid">
+        <!-- Module 1: SQL BoQ Data Extraction (User Image 1) -->
         <div class="tech-card">
-          <div class="tech-card-media" onclick="openLightbox('assets/images/megatextile_structure.png', 'OpenBIM Tekla Structures sang Revit qua bộ chuẩn 85 Shared Parameters / OpenBIM Tekla to Revit Interoperability')">
-            <img src="assets/images/megatextile_structure.png" alt="OpenBIM Tekla to Revit">
+          <div class="tech-card-media" onclick="openLightbox('assets/images/kaka_export_sql_boq.png', 'Giao diện KAKA — Trích xuất dữ liệu BoQ / SQL từ mô hình Revit sang SQLite (.db) và SQL Script (.sql) theo chuẩn đề mục Mindmap')">
+            <img src="assets/images/kaka_export_sql_boq.png" alt="KAKA Trích Xuất Dữ Liệu BoQ / SQL từ Revit">
           </div>
           <div class="tech-card-body">
             <h3 class="tech-card-title">
-              <span class="lang-vi">7. Tích Hợp OpenBIM: Tekla &harr; Revit (85 Shared Parameters)</span>
-              <span class="lang-en inline">7. OpenBIM: Tekla &harr; Revit (85 Shared Parameters)</span>
+              <span class="lang-vi">1. Quy Trình Trích Xuất Dữ Liệu Khối Lượng BoQ &amp; Cơ Sở Dữ Liệu SQL Từ Mô Hình Revit</span>
+              <span class="lang-en inline">1. Automated BIM to SQL Pipeline &amp; BoQ Data Extraction (SQLite / SQL Script)</span>
             </h3>
             <p class="tech-card-desc">
-              <span class="lang-vi">Thiết lập bộ ánh xạ thuộc tính IFC2x3/IFC4 giữa mô hình gia công Tekla Structures và Revit (dự án Mega Textile &amp; BW Bàu Bàng), đồng bộ hoàn toàn dữ liệu mã cấu kiện, mác thép, liên kết và quản lý lắp dựng thi công.</span>
-              <span class="lang-en block">Engineered an 85-attribute IFC OpenBIM mapping system linking Tekla fabrication models to Revit (Mega Textile &amp; BW Bau Bang), ensuring seamless transfer of piece marks, steel grades, connections, and erection sequencing data.</span>
+              <span class="lang-vi">
+                Quy trình tự động hóa bóc tách khối lượng (5D QTO) khép kín từ mô hình hình học Revit sang cơ sở dữ liệu quan hệ, trực tiếp phục vụ công tác đấu thầu và quản trị chi phí:
+                <br><br>
+                <strong>• Thuật toán quét và phân loại cấu kiện:</strong> Tự động bóc tách toàn bộ dự án (Móng, Cột, Dầm, Vách, Sàn, Cốt thép Rebar...) và gom nhóm theo <strong>Mã Đề Mục Chuẩn Mindmap</strong> (<em>00.Rebar</em>: Thép gia công/kg; <em>02.Mong</em>: Bê tông m³/ván khuôn m²; <em>05.Cot</em>: Cột kết cấu; <em>07.Dam</em>: Dầm kết cấu...).<br>
+                <strong>• Tính toán 4 chỉ số định lượng tự động:</strong> Tự động tính toán đồng thời Số lượng cấu kiện, Thể tích bê tông ($m^3$), Diện tích bề mặt ván khuôn ($m^2$) và Tổng khối lượng cốt thép ($kg$).<br>
+                <strong>• Cơ sở dữ liệu SQLite Database (.db):</strong> Ghi trực tiếp dữ liệu dạng bảng quan hệ vào <code>mindmap.db</code>, cho phép truy vấn nhanh (SQL SELECT), kết nối PowerBI báo cáo và kiểm toán tức thì.<br>
+                <strong>• Xuất Script SQL (.sql) &amp; Đồng bộ CDE:</strong> Tự sinh file kịch bản SQL tự động (vd: <code>BSV-MEGA-TMB-..._boq.sql</code>) chứa toàn bộ câu lệnh INSERT/UPDATE để nạp thẳng lên hệ thống ERP, máy chủ SQL Server hoặc cổng thông tin quản trị doanh nghiệp.
+              </span>
+              <span class="lang-en block">
+                End-to-end automated 5D Quantity Takeoff (QTO) data pipeline bridging Revit geometry directly to relational databases for cost governance and rapid bidding:
+                <br><br>
+                <strong>• Automated Parsing &amp; Mindmap Classification:</strong> Parses entire Revit assemblies (Foundations, Columns, Beams, Walls, Slabs, Rebar) mapped to <strong>Standardized Mindmap Categories</strong> (<em>00.Rebar</em>: Fabrication rebar weight; <em>02.Mong</em>: Concrete $m^3$/Formwork $m^2$; <em>05.Cot</em>: Columns; <em>07.Dam</em>: Beams).<br>
+                <strong>• 4-Metric Automated Calculation:</strong> Concurrently calculates Element Count, Concrete Volume ($m^3$), Formwork Contact Area ($m^2$), and Total Rebar Weight ($kg$).<br>
+                <strong>• Direct SQLite Database Export (.db):</strong> Writes structured tabular records directly into <code>mindmap.db</code> for low-latency SQL querying, audit validation, and PowerBI business intelligence dashboards.<br>
+                <strong>• Automated SQL Script Generation (.sql):</strong> Generates batch SQL insert scripts (e.g., <code>BSV-MEGA-TMB-..._boq.sql</code>) ready for immediate ingestion into corporate ERP or enterprise SQL Server environments.
+              </span>
             </p>
           </div>
         </div>
 
-        <!-- Tech 8: 5D QTO Automation -->
+        <!-- Module 2: AI Copilot & Query Engine (User Image 2) -->
         <div class="tech-card">
-          <div class="tech-card-media" onclick="openLightbox('assets/images/schedule_beam.png', 'Hệ thống tự động bóc tách BOQ Kết cấu & Hoàn thiện Kiến trúc / 5D QTO & BOQ Automation')">
-            <img src="assets/images/schedule_beam.png" alt="5D QTO Schedules">
+          <div class="tech-card-media" onclick="openLightbox('assets/images/kaka_ai_copilot_revit.png', 'Giao diện KAKA — AI Copilot for Revit: Trợ lý AI kết nối Live API điều khiển và truy vấn dữ liệu mô hình Revit bằng ngôn ngữ tự nhiên')">
+            <img src="assets/images/kaka_ai_copilot_revit.png" alt="KAKA AI Copilot for Revit">
           </div>
           <div class="tech-card-body">
             <h3 class="tech-card-title">
-              <span class="lang-vi">8. Tự Động Hóa 5D QTO &amp; Kiểm Soát Giao Cắt (ATool &amp; BimSpeed)</span>
-              <span class="lang-en inline">8. 5D QTO Automation &amp; Solid Precedence</span>
+              <span class="lang-vi">2. Tích Hợp AI Thực Thi - Truy Vấn &amp; Điều Khiển Dữ Liệu Revit Trực Tiếp</span>
+              <span class="lang-en inline">2. AI-Augmented Execution: Direct Revit Data Query &amp; Automation</span>
             </h3>
             <p class="tech-card-desc">
-              <span class="lang-vi">Tự động xử lý thứ tự ưu tiên giao cắt khối hình học (Sàn &gt; Móng &gt; Cột &gt; Dầm &gt; Vách) và đồng bộ 31 bảng khối lượng kiến trúc, 7 bảng kết cấu, loại trừ 100% rủi ro trùng lặp khối lượng đấu thầu và nghiệm thu.</span>
-              <span class="lang-en block">Automated solid geometry join precedence (Slab &gt; Foundation &gt; Column &gt; Beam &gt; Wall) and synchronized 31 architectural and 7 structural schedules, fully eliminating quantity duplication in bidding and billing.</span>
+              <span class="lang-vi">
+                Trợ lý trí tuệ nhân tạo chuyên sâu <strong>KAKA AI Copilot for Revit</strong> (vận hành qua giao thức <em>Live API &amp; Revit Model Context Protocol - MCP Server HTTP :8080</em>): Cho phép kỹ sư trò chuyện trực tiếp với mô hình Revit thông qua ngôn ngữ tự nhiên (NLP) bằng Tiếng Việt hoặc Tiếng Anh. AI tự động phân tích ngữ cảnh, chuyển đổi prompt thành các hàm <strong>Revit API Command</strong> để thực thi tức thì các tác vụ quản trị mô hình:
+                <br><br>
+                <strong>• Prompt truy vấn &amp; highlight cấu kiện:</strong> <em>"Chọn các tường Tole tầng 0"</em>, <em>"Tìm và cô lập các cột ở cao độ tầng +4.500"</em>, <em>"Kiểm tra các dầm có bề rộng &gt; 500mm"</em>.<br>
+                <strong>• Prompt kiểm toán khối lượng &amp; dữ liệu:</strong> <em>"Bóc tách khối lượng BoQ dự án sang SQL"</em>, <em>"Thống kê tổng thể tích bê tông móng và chiều dài cọc khoan nhồi"</em>.<br>
+                <strong>• Prompt quản trị thông tin dự án:</strong> <em>"Xem thông tin dự án và danh sách tất cả các tầng (Levels)"</em>, <em>"Lọc các cấu kiện thiếu tham số Shared Parameters"</em>.
+              </span>
+              <span class="lang-en block">
+                Engineering conversational assistant <strong>KAKA AI Copilot for Revit</strong> (powered by <em>Live API &amp; Revit Model Context Protocol - MCP Server HTTP :8080</em>): Enables structural engineers to converse directly with active Revit project databases in natural language (Vietnamese &amp; English). The AI parses contextual intent and compiles prompts into low-latency <strong>Revit API Commands</strong> for instant execution:
+                <br><br>
+                <strong>• Element Selection &amp; Isolation Prompts:</strong> <em>"Select Tole walls on Level 0"</em>, <em>"Find and isolate all structural columns at +4.500"</em>, <em>"Identify beams with width &gt; 500mm"</em>.<br>
+                <strong>• Automated BoQ &amp; Volume Take-Off Prompts:</strong> <em>"Extract project BoQ takeoff into SQL database"</em>, <em>"Calculate total foundation concrete volume and bored pile lengths"</em>.<br>
+                <strong>• Project Audit &amp; Governance Prompts:</strong> <em>"Show project information and list of levels"</em>, <em>"Filter elements missing designated Shared Parameters"</em>.
+              </span>
             </p>
+          </div>
+        </div>
+
+        <!-- Module 3: Bố Trí Thép Đa Cấu Kiện (Multi-Element Rebar Engine) -->
+        <div class="tech-card">
+          <div class="tech-card-media" onclick="openLightbox('assets/images/kaka_column_rebar_ui.png', 'Động cơ bố trí thép tự động KAKA Structure: Tự động hóa sinh thép 3D LOD 400 đa cấu kiện (Cột, Dầm, Sàn, Móng, Vách, Cầu thang) và tự động xuất bản vẽ Shop Drawing chi tiết')">
+            <img src="assets/images/kaka_column_rebar_ui.png" alt="KAKA Multi-Element Rebar Automation Engine">
+          </div>
+          <div class="tech-card-body">
+            <h3 class="tech-card-title">
+              <span class="lang-vi">3. Bố Trí Cốt Thép Tự Động Các Cấu Kiện (Cột, Dầm, Sàn, Móng, Vách, Cầu Thang)</span>
+              <span class="lang-en inline">3. Multi-Element Automated Rebar Engine (Columns, Beams, Slabs, Foundations, Walls, Stairs)</span>
+            </h3>
+            <p class="tech-card-desc">
+              <span class="lang-vi">
+                Hệ thống động cơ C# (.NET / Revit API) chuyên sâu tự động hóa mô hình hóa cốt thép 3D LOD 400 toàn diện cho các loại cấu kiện chịu lực chính của công trình:
+                <br><br>
+                <strong>• Thép Cột (Columns):</strong> Tự động nhận diện tiết diện (chữ nhật, vuông, tròn), tính toán thép dọc phương X, Y, bố trí đai chính/đai phụ/đai lồng, thiết lập thép chờ móng (Starter bars), vị trí nối thép và chiều dài neo chuẩn Spec.<br>
+                <strong>• Thép Dầm (Beams):</strong> Tự động bố trí thép chủ trên/dưới, thép tăng cường gối/nhịp, thép đai chống cắt thay đổi theo biểu đồ bao momen và sinh mặt cắt dầm tự động.<br>
+                <strong>• Thép Sàn (Slabs):</strong> Tự động rải thép lớp trên (Top) và lớp dưới (Bottom), gia cường lỗ mở, bo cạnh biên sàn và kiểm soát chiều dày lớp bê tông bảo vệ.<br>
+                <strong>• Thép Móng (Foundations):</strong> Bố trí lưới thép móng đơn, móng băng, đài cọc và giằng móng kèm chân chó kê thép đúng tiêu chuẩn kỹ thuật.<br>
+                <strong>• Thép Vách &amp; Cầu Thang:</strong> Tự động sinh thép lưới vách hầm/vách lõi thang máy, cốt thép gia cường vùng biên chịu nén/kéo và bố trí thép bậc/chiếu nghỉ cầu thang.<br>
+                <strong>• Tự động xuất bản vẽ:</strong> Sinh bản vẽ chi tiết cấu kiện, mặt cắt 2D, gắn thẻ thép (MRA) và bảng thống kê cốt thép (BBS) đồng bộ chính xác 100%.
+              </span>
+              <span class="lang-en block">
+                Advanced C# (.NET / Revit API) algorithmic engine automating end-to-end 3D LOD 400 reinforcement modeling across all primary structural elements:
+                <br><br>
+                <strong>• Columns:</strong> Parameterizes rectangular, square, and circular sections; configures X/Y longitudinal bars, primary/supplementary/spiral ties, foundation starter bars, lap splice offsets, and standard hook anchorages.<br>
+                <strong>• Beams:</strong> Automates top/bottom continuous bars, span/support curtailment rebars, variable shear stirrup spacing based on moment envelopes, and automated section views.<br>
+                <strong>• Slabs:</strong> Automates top &amp; bottom mesh layout, opening perimeter reinforcement, edge trimmers, and concrete cover chairs.<br>
+                <strong>• Foundations:</strong> Rapid reinforcement placement for isolated footings, strip footings, pile caps, and foundation tie beams.<br>
+                <strong>• Shear Walls &amp; Stairs:</strong> Generates boundary zone confinement rebar, core wall vertical/horizontal distribution meshes, and monolithic stair flight/landing rebars.<br>
+                <strong>• Automated Drawing Generation:</strong> Instantly produces section cuts, detail callouts, Multi-Rebar Annotations (MRA), and Bar Bending Schedules (BBS) with 100% precision.
+              </span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Module 4: Hệ Thống Sổ Tay BIM Doanh Nghiệp (GitHub BIM Portal) -->
+        <div class="tech-card">
+          <div class="tech-card-media" onclick="openLightbox('assets/images/github_bim_portal_overview.png', 'Cổng Hệ Thống Sổ Tay Chuẩn Hóa BIM Doanh Nghiệp (ISO 19650, Kết Cấu Ver 2, Kiến Trúc HTKC, Shop Drawing Rebar) — Bộ Quy Chuẩn Số Hóa Toàn Diện')">
+            <img src="assets/images/github_bim_portal_overview.png" alt="GitHub BIM Enterprise Portals">
+          </div>
+          <div class="tech-card-body">
+            <h3 class="tech-card-title">
+              <span class="lang-vi">4. Hệ Thống Sổ Tay &amp; Cổng Chuẩn Hóa BIM Doanh Nghiệp</span>
+              <span class="lang-en inline">4. Enterprise BIM SOP Portals &amp; Knowledge Base</span>
+            </h3>
+            <p class="tech-card-desc">
+              <span class="lang-vi">Hệ sinh thái số hóa quy trình chuẩn BIM được xây dựng và lưu trữ tập trung trong <strong>Hệ Thống Số Hóa Quy Chuẩn BIM Doanh Nghiệp</strong>: tích hợp cổng thông tin vòng đời dự án ISO 19650, Sổ tay Kết cấu Ver 2 (7 bước BOQ, KAKA Join priority), Sổ tay Kiến trúc (6 mã HTKC, 31 schedules) và Sổ tay Shop Rebar (quy chuẩn cắt nối L/4, L/6, 35 bảng thống kê gia công thép).</span>
+              <span class="lang-en block">Enterprise-grade digitized BIM standard portal hosted in the <strong>Enterprise BIM Knowledge Base</strong>: unites ISO 19650 lifecycle governance, Structural BIM Ver 2 (7-step BOQ, KAKA join hierarchy), Architectural Manual (6 HTKC codes, 31 schedules), and LOD 400 Rebar Shop Guide (L/4, L/6 lap splice rules, 35 BBS fabrication schedules).</span>
+            </p>
+            <div style="margin-top: 0.65rem; border-top: 1px dashed var(--border); padding-top: 0.5rem; display: flex; justify-content: flex-end;">
+              <span class="bim-sop-link"><span class="lang-vi">Chuẩn ISO 19650</span><span class="lang-en inline">ISO 19650 Standard</span></span>
+            </div>
           </div>
         </div>
       </div>
@@ -3367,8 +3437,8 @@
                   <span class="lang-en block"><strong>Managed Shop Drawing QA/QC</strong> with rigorous auditing of high-strength bolt connections, weld details, and anchor bolt setting layouts.</span>
                 </li>
                 <li>
-                  <span class="lang-vi"><strong>Ứng dụng OpenBIM Tekla &harr; Revit (85 Shared Parameters):</strong> Xây dựng bộ thông số thuộc tính chuẩn hóa (MEGA-BP3) đồng bộ hóa mô hình sản xuất kết cấu thép từ Tekla Structures sang Revit và Navisworks, kiểm soát chuẩn xác cấu kiện vượt nhịp và mặt bằng định vị bu lông neo.</span>
-                  <span class="lang-en block"><strong>OpenBIM Tekla &harr; Revit Interoperability (85 Shared Parameters):</strong> Implemented the standardized MEGA-BP3 property set to exchange fabrication models from Tekla Structures to Revit and Navisworks, governing long-span trusses and anchor bolt precision.</span>
+                  <span class="lang-vi"><strong>Phối hợp Mô hình Tekla Structures &amp; Revit:</strong> Đồng bộ hóa mô hình sản xuất kết cấu thép gia công sang Revit và Navisworks, kiểm soát chuẩn xác cấu kiện vượt nhịp, nút liên kết bu lông móng và kế hoạch lắp dựng tại hiện trường.</span>
+                  <span class="lang-en block"><strong>Tekla Structures &amp; Revit Model Coordination:</strong> Synchronized structural steel fabrication models into Revit and Navisworks, governing long-span trusses, anchor bolt setting layouts, and on-site erection sequencing.</span>
                 </li>
                 <li>
                   <span class="lang-vi"><strong>Điều phối các nhà thầu phụ</strong> chuyên ngành kết cấu thép, cơ điện MEP, HVAC dệt may và hạ tầng kỹ thuật.</span>
@@ -3392,6 +3462,132 @@
       </div>
     </section>
 
+
+    <!-- Executive Summary & Strategic Leadership Vision (Tóm Tắt Mục Tiêu & Triết Lý Quản Trị) -->
+    <section class="section-card" id="executive-summary" style="margin-top: 2rem;">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          <span class="lang-vi">Tóm Tắt Mục Tiêu &amp; Triết Lý Quản Trị Kỹ Thuật (Executive Summary)</span>
+          <span class="lang-en inline">Executive Summary &amp; Technical Management Philosophy</span>
+        </h2>
+        <span style="font-size: 0.8125rem; color: var(--text-sub); font-weight: 600;">
+          <span class="lang-vi">Định Hướng Quản Trị Kỹ Thuật &amp; BIM Thực Chiến</span>
+          <span class="lang-en inline">Pragmatic Technical Leadership &amp; BIM Governance</span>
+        </span>
+      </div>
+
+      <div class="letter-box" style="margin-bottom: 1.25rem;">
+        <p style="font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">
+          <span class="lang-vi block">
+            Hơn 15 năm kinh nghiệm thực chiến đúc kết qua các môi trường Tư vấn Thiết kế và Tổng thầu (General Contractor) xây dựng nên năng lực cốt lõi của tôi: <strong>Lấy tư duy thiết kế kết cấu, kiểm soát chi phí thực tế và thi công hiện trường làm gốc</strong>, ứng dụng BIM và công nghệ lập trình tự động hóa (C#, Python, AI Copilot) để tạo ra giá trị kinh tế trực tiếp cho doanh nghiệp qua 5 trụ cột:
+          </span>
+          <span class="lang-en block">
+            Over 15 years of hands-on expertise spanning Design Consultancy and General Contractor environments forge my core capability: <strong>Grounded in structural design acumen, rigorous cost governance, and on-site constructability</strong>, leveraging BIM and custom automation (C#, Python, AI Copilot) to deliver tangible profitability across 5 core pillars:
+          </span>
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem;">
+          <div style="background: white; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.9rem; border-left: 3px solid #0284c7;">
+            <div style="font-weight: 700; color: #0369a1; font-size: 0.875rem; margin-bottom: 0.35rem;">
+              <span class="lang-vi">1. Vòng đời dự án (Concept → As-built)</span>
+              <span class="lang-en inline">1. Full Lifecycle (Concept → As-built)</span>
+            </div>
+            <div style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.55;">
+              <span class="lang-vi">Kiểm soát thông tin đa cấp độ LOD (100–500), bảo đảm mô hình As-built khớp 100% với hiện trường và thỏa mãn các tiêu chuẩn khắt khe nhất của Chủ đầu tư.</span>
+              <span class="lang-en block">Rigorous LOD (100–500) data progression, ensuring As-built models mirror physical construction perfectly and meet top-tier client specifications.</span>
+            </div>
+          </div>
+
+          <div style="background: white; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.9rem; border-left: 3px solid #10b981;">
+            <div style="font-weight: 700; color: #047857; font-size: 0.875rem; margin-bottom: 0.35rem;">
+              <span class="lang-vi">2. Tối ưu VE &amp; Hỗ trợ Đấu thầu</span>
+              <span class="lang-en inline">2. Structural VE &amp; Bidding Support</span>
+            </div>
+            <div style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.55;">
+              <span class="lang-vi">Phản biện mô hình tính toán kết cấu, đề xuất giải pháp thay thế tiết kiệm khối lượng bê tông/thép và xuất khối lượng (QTO) thần tốc để gia tăng tỷ lệ trúng thầu.</span>
+              <span class="lang-en block">Counter-analyzing engineering designs, proposing leaner structural alternatives, and extracting rapid QTO to secure winning bid margins.</span>
+            </div>
+          </div>
+
+          <div style="background: white; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.9rem; border-left: 3px solid #f59e0b;">
+            <div style="font-weight: 700; color: #b45309; font-size: 0.875rem; margin-bottom: 0.35rem;">
+              <span class="lang-vi">3. Kiểm soát Thầu phụ &amp; Thẩm định VE</span>
+              <span class="lang-en inline">3. Sub-contractor Control &amp; VE Audit</span>
+            </div>
+            <div style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.55;">
+              <span class="lang-vi">Đưa mọi đề xuất thay đổi biện pháp/kết cấu vào mô hình federated kiểm tra chéo (CDE), loại bỏ triệt để nguy cơ xung đột MEP/kiến trúc trước khi triển khai.</span>
+              <span class="lang-en block">Integrating all subcontractor VE adjustments into federated CDE models for cross-discipline clash resolution prior to fabrication.</span>
+            </div>
+          </div>
+
+          <div style="background: white; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.9rem; border-left: 3px solid #6366f1;">
+            <div style="font-weight: 700; color: #4338ca; font-size: 0.875rem; margin-bottom: 0.35rem;">
+              <span class="lang-vi">4. Shop Drawing &amp; Thi Công Thực Tế</span>
+              <span class="lang-en inline">4. Constructability &amp; Shop Drawing</span>
+            </div>
+            <div style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.55;">
+              <span class="lang-vi">Kiểm soát nút giao phức tạp, biện pháp cẩu lắp cấu kiện đúc sẵn (Precast) và đồng bộ bê tông - thép, triệt tiêu sai sót đập phá hay rework tại hiện trường.</span>
+              <span class="lang-en block">Proactive review of critical connection nodes, precast lifting workflows, and rebar-steel coordination, eliminating costly on-site demolition.</span>
+            </div>
+          </div>
+
+          <div style="background: white; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.9rem; border-left: 3px solid #ec4899; grid-column: 1 / -1;">
+            <div style="font-weight: 700; color: #be185d; font-size: 0.875rem; margin-bottom: 0.35rem;">
+              <span class="lang-vi">5. Khép kín quy trình bằng Tự động hóa &amp; AI (C# / Python / Revit MCP)</span>
+              <span class="lang-en inline">5. Automated Delivery via C#, Python &amp; AI MCP Server</span>
+            </div>
+            <div style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.55;">
+              <span class="lang-vi">Trực tiếp lập trình hệ sinh thái Add-in KAKA Structure, tự động hóa trích xuất BoQ sang SQL Database và giao tiếp AI Copilot hỗ trợ toàn ban điều hành ra quyết định nhanh chóng, chuẩn xác.</span>
+              <span class="lang-en block">Directly developing proprietary KAKA Structure Add-ins, automated BoQ SQL extraction, and AI Copilot integration to power rapid, data-driven decisions.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="letter-conclusion" style="margin-top: 1rem;">
+          <p style="margin: 0; line-height: 1.7; font-size: 0.9rem;">
+            <span class="lang-vi block">
+              <strong>Tầm nhìn hướng tới:</strong> Đóng góp năng lực trong vai trò <strong>Quản Lý Kỹ Thuật Dự Án / Quản Trị Hệ Thống BIM</strong> tại Quý Doanh Nghiệp — nơi BIM không chỉ là công cụ vẽ 3D đơn thuần, mà là giải pháp số hóa chiến lược giúp tăng tỷ lệ thắng thầu, triệt tiêu rủi ro sai sót và tối đa hóa lợi nhuận thực tế.
+            </span>
+            <span class="lang-en block">
+              <strong>Leadership Vision:</strong> Contributing as <strong>Project Technical Manager / Enterprise BIM Director</strong> — transforming BIM from basic 3D modeling into a competitive strategic asset that elevates tender win-rates, eradicates costly defects, and maximizes bottom-line profitability.
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <div class="highlight-stat-grid" style="margin-top: 0.5rem;">
+        <div class="stat-pill">
+          <div class="stat-number" style="font-size: 1.15rem;">Concept → As-built</div>
+          <div class="stat-desc">
+            <span class="lang-vi">Vòng đời BIM &amp; Quản lý LOD</span>
+            <span class="lang-en block">Full Lifecycle BIM &amp; LOD Control</span>
+          </div>
+        </div>
+        <div class="stat-pill">
+          <div class="stat-number">VE &amp; QTO</div>
+          <div class="stat-desc">
+            <span class="lang-vi">Tối ưu chi phí &amp; Hỗ trợ đấu thầu</span>
+            <span class="lang-en block">Cost Optimization &amp; Bidding Win</span>
+          </div>
+        </div>
+        <div class="stat-pill">
+          <div class="stat-number">Zero Rework</div>
+          <div class="stat-desc">
+            <span class="lang-vi">Kiểm soát xung đột &amp; Hiện trường</span>
+            <span class="lang-en block">Clash-Free &amp; Constructability</span>
+          </div>
+        </div>
+        <div class="stat-pill">
+          <div class="stat-number">C# &amp; Python</div>
+          <div class="stat-desc">
+            <span class="lang-vi">Tự động hóa &amp; Khép kín quy trình</span>
+            <span class="lang-en block">Custom Automation &amp; Add-ins</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Image Lightbox Modal -->
@@ -3407,7 +3603,10 @@
   <footer class="site-footer">
     <div class="footer-content">
       <p style="font-weight: 700; color: var(--primary-dark); font-size: 1.1rem; margin-bottom: 0.25rem;">VÕ PHI THANH / VO PHI THANH</p>
-      <p>BIM Director • Design Management, Value Engineering & GC Automation Specialist</p>
+            <p>
+        <span class="lang-vi">Quản Lý Thiết Kế Kết Cấu, Value Engineering &amp; Tự Động Hóa BIM Tổng Thầu</span>
+        <span class="lang-en inline">Structural Design Management, Value Engineering &amp; GC BIM Automation Specialist</span>
+      </p>
       <p style="margin-top: 0.5rem; font-size: 0.8125rem;">
         <span class="lang-vi">Hồ sơ năng lực kỹ thuật và portfolio dự án kết cấu cao tầng, công nghiệp, quản trị kỹ thuật tổng thầu & chuyển đổi số BIM.</span>
         <span class="lang-en block">Technical portfolio and engineering resume for high-rise, industrial, general contractor management & enterprise BIM leadership.</span>
